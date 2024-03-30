@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/movieapi/")
 class MovieController(private val movieService: MovieService) {
 
-    //this is my coontroller
+    //this is my controller
 
     @PostMapping("/addmovie/")
     fun createMovie(@RequestBody movieDTO: MovieDTO): ResponseEntity<MovieDTO> {
