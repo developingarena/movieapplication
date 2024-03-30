@@ -15,9 +15,10 @@ import org.springframework.web.bind.annotation.RestController
 
 
 @RestController
-@RequestMapping("movieapi")
+@RequestMapping("/movieapi/")
 class MovieController(private val movieService: MovieService) {
 
+    //this is my coontroller
 
     @PostMapping("/addmovie/")
     fun createMovie(@RequestBody movieDTO: MovieDTO): ResponseEntity<MovieDTO> {
@@ -27,7 +28,7 @@ class MovieController(private val movieService: MovieService) {
 
     }
 
-    @GetMapping("getallmovies")
+    @GetMapping
     fun getMovies(): ResponseEntity<List<MovieDTO>> =
         ResponseEntity.ok(movieService.getMovies())
 
