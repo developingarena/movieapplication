@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController
 class MovieController(private val movieService: MovieService) {
 
     //this is my controller
-    //adding comments to see if jenkins build automatically Test 3
+    //adding comments to see if jenkins build automatically Test 4
 
     @PostMapping("/addmovie/")
     fun createMovie(@RequestBody movieDTO: MovieDTO): ResponseEntity<MovieDTO> {
